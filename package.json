@@ -1,0 +1,12 @@
+{
+  "name": "mentor-training",
+  "version": "1.0.0",
+  "description": "Learning TS, React, Node, Zustand, Tailwind & Hono",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "John Thomas Caballero",
+  "license": "ISC"
+}
