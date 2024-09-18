@@ -1,3 +1,5 @@
+// Compare TS to JS
+
 // TODO: Demonstrate number type
 const age1 = 30;
 
@@ -16,3 +18,4 @@ console.log(myTuple1[3][1]);
 
 // TODO: Demonstrate any type
 const anything1 = "John";
+
