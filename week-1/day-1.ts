@@ -13,14 +13,19 @@ const names: string[] = ["John", "Jane", "Joe"];
 const names2: Array<string> = ["John", "Jane", "Joe"]; //alternative
 
 // TODO: Demonstrate tuple type
-const myTuple: [number, string, boolean, string[]] = [10, "Hello", true, ["John", "Jane"]];
+const myTuple: [number, string, boolean, string[]] = [
+  10,
+  "Hello",
+  true,
+  ["John", "Jane"],
+];
 
 // TODO: Demonstrate any type
 const anything: any = "John";
 // Cons: Loss of type safety, decreased maintainability, limited tooling support, hidden runtime errors, and missed benefits of TypeScript’s type system.
 
 // TODO: Demonstrate unknown type
-const unknown: unknown = 'JOhn';
+const unknown: unknown = "JOhn";
 // instead of any, use unknown.
 
 // TODO: Demonstrate never type
@@ -33,7 +38,7 @@ const hello: void = undefined;
 // void real world example
 const promise = new Promise((resolve, reject) => {
   return resolve;
-})
+});
 
 void promise;
 
@@ -53,7 +58,9 @@ const person1 = {
   address: {
     city: "New York",
     state: "NY",
-  }
-} satisfies Record<string, number | string | Record<string, string>>;
+  },
+  favoriteColors: ["red", "blue"],
+} satisfies Record<string, number | string | Record<string, string> | string[]>;
 
 person1.address.city;
+person1.favoriteColors[1];
