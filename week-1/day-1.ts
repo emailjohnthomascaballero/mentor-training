@@ -29,3 +29,31 @@ const arr: never[] = [];
 
 // TODO: Demonstrate void type
 const hello: void = undefined;
+
+// void real world example
+const promise = new Promise((resolve, reject) => {
+  return resolve;
+})
+
+void promise;
+
+// TODO: Demonstrate null and undefined
+const nullType: null = null;
+const undefinedType: undefined = undefined;
+
+const lastName: string | null = null;
+
+// TODO: Demonstrate object type
+const obj: object = []; // not usually used.
+
+//  best practice
+const person1 = {
+  name: "John",
+  age: 30,
+  address: {
+    city: "New York",
+    state: "NY",
+  }
+} satisfies Record<string, number | string | Record<string, string>>;
+
+person1.address.city;
