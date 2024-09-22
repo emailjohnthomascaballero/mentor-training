@@ -2,7 +2,7 @@
 <p class="header">This GitHub repository documents my Mentor journey—a collection of coding challenges, solutions, and progress as I sharpen my programming skills.</p>
 
 <p align="center">
-  <a href="https://github.com/emailjohnthomascaballero/mentor-training-bossrod">
+  <a href="https://github.com/emailjohnthomascaballero/mentor-training">
     <img src="./bossrod-banner.jpg" width="100%">
   </a>
 </p>
