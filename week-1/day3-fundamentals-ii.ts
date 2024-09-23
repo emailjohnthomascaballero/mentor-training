@@ -127,4 +127,71 @@ const dog4: GenericDog2<DogProperties> = {
   properties: { name: "Fido", age: 10, color: "black" }
 }
 
-// TODO: Create an enum
+// TODO: Create an enum (its like an object but help to prevent bugs)
+
+enum Color {
+  Red = 'Red',
+  Yellow = 'Yellow',
+  Blue = 'Blue',
+}
+
+const color = Color.Red;
+const color2 = Color.Yellow;
+
+if (color === Color.Red) {
+  console.log('The color is red');
+}
+
+
+// TODO: Create a native enum or const enum (preferred to use)
+
+// example 1 (value is visible in planet1 if hovered):
+// const Planets = {
+//   Mercury: 'Mercury 123',
+//   Venus: 'Venus 123',
+//   Earth: 'Earth 123',
+// } as const; //add 'as const' to be a native enum.
+
+// const planet1 = Planets.Mercury;
+
+// example 2 (return key & type):
+const Planets = {
+  Mercury: 'Mercury 123',
+  Venus: 'Venus 123',
+  Earth: 'Earth 123',
+} as const;
+
+type PlanetsKey = keyof typeof Planets; // 'Mercury' | 'Venus' | 'Earth'
+type PlanetsValue = typeof Planets[PlanetsKey]; // 'Mercury 123' | 'Venus 123' | 'Earth 123'
+type PlanetsSingleValue = typeof Planets['Earth']; // 'Earth 123'
+
+const planet1 = Planets.Mercury;
+
+
+// TODO: Create a function with a generic type:
+
+// example 1 (automatically assigning the type of data):
+// type GetPlanetDataArgs<TData> = {
+//   id: string;
+//   data: TData;
+// }
+
+// function getPlanetData<TData>({ id, data }: GetPlanetDataArgs<TData>) {
+//   return { id, data };
+// }
+
+// const planetData = getPlanetData({id: '1', data: 'Mercury 123'}); // automatic assigning the type of data
+
+
+// example 2 (manual assigning the type of data):
+type GetPlanetDataArgs<TData> = {
+  id: string;
+  data: TData;
+}
+
+function getPlanetData<TData>({ id, data }: GetPlanetDataArgs<TData>) {
+  return { id, data };
+}
+
+const planetData = getPlanetData<number>({id: '1', data: 123}); // manual assigning the type of data
+
