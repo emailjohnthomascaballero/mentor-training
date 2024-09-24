@@ -184,6 +184,19 @@ const planet1 = Planets.Mercury;
 
 
 // example 2 (manual assigning the type of data):
+// type GetPlanetDataArgs<TData> = {
+//   id: string;
+//   data: TData;
+// }
+
+// function getPlanetData<TData>({ id, data }: GetPlanetDataArgs<TData>) {
+//   return { id, data };
+// }
+
+// const planetData = getPlanetData<number>({id: '1', data: 123}); // manual assigning the type of data
+
+
+// example 3
 type GetPlanetDataArgs<TData> = {
   id: string;
   data: TData;
@@ -193,5 +206,4 @@ function getPlanetData<TData>({ id, data }: GetPlanetDataArgs<TData>) {
   return { id, data };
 }
 
-const planetData = getPlanetData<number>({id: '1', data: 123}); // manual assigning the type of data
-
+const planetData = getPlanetData<number>({id: '1', data: 123}); 
