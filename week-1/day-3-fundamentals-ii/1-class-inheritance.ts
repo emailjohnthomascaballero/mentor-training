@@ -50,13 +50,13 @@ class Dog implements DogInterface {
 
 const dog1 = new Dog("Fido");
 
-dog1.getName();
+console.log(dog1.getName());
 dog1.setName("Rex");
 
 // Mock is used for testing.
 class MockDog implements DogInterface {
-  public name;
-  constructor (name: string){
+  // public name;
+  constructor (public name: string){
     this.name = name;
   }
 
@@ -68,3 +68,7 @@ class MockDog implements DogInterface {
     this.name = name;
   }
 }
+
+const mockdog = new MockDog("MockFido");
+
+console.log(mockdog.getName());
