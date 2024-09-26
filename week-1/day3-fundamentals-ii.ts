@@ -1,74 +1,3 @@
-// Day 3: TypeScript Fundamentals II
-
-// TODO: Create a class with inheritance
-
-
-//  class only:
-// class Dog {
-//   constructor (public name: string){
-//     this.name = name;
-//   }
-
-//   getName(){
-//     return this.name;
-//   }
-
-//   setName(name: string){
-//     this.name = name;
-//   }
-// }
-
-// const dog1 = new Dog("Fido");
-
-// dog1.getName();
-// dog1.setName("Rex");
-
-
-//  with interface:
-// this is mirror only and you can use it in testing
-interface DogInterface {
-  name: string;
-  getName(): string;
-  setName(name: string): void;
-}
-
-class Dog implements DogInterface {
-  public name;
-  constructor (name: string){
-    this.name = name;
-  }
-
-  getName(){
-    return this.name;
-  }
-
-  setName(name: string){
-    this.name = name;
-  }
-}
-
-const dog1 = new Dog("Fido");
-
-dog1.getName();
-dog1.setName("Rex");
-
-// Mock is used for testing.
-class MockDog implements DogInterface {
-  public name;
-  constructor (name: string){
-    this.name = name;
-  }
-
-  getName(){
-    return this.name;
-  }
-
-  setName(name: string){
-    this.name = name;
-  }
-}
-
-
 // TODO: Demonstrate generics (important if you are working in complex projects)
 
 
@@ -241,6 +170,8 @@ const adminData2 = getUserProperties("admin");
 adminData2.name;
 adminData2.age;
 adminData2.adminAccess;
+
+// console.log(adminData2.name);
 
 
 
