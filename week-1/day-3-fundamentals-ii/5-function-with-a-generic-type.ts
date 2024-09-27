@@ -88,6 +88,8 @@ console.log(adminData2);
 
 // EXAMPLES OF BAD PRACTICES
 
+
+
 // not recommend to use arrow function
 // const aaaa = {
 //   name: "John",
