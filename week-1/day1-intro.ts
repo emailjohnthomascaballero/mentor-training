@@ -1,8 +1,6 @@
-// TODO: Demonstrate number type
-const age: number = 30;
 
-// TODO: Demonstrate string type
-const firstName: string = "John";
+
+
 
 // TODO: Demonstrate boolean type
 const isAdmin: boolean = true;
