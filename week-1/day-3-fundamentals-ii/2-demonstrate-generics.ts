@@ -62,3 +62,5 @@ const dog4: GenericDog2<DogProperties> = {
   name: "Fido",
   properties: { name: "Fido", age: 10, color: "black" }
 }
+
+console.log(dog4.properties.color);
