@@ -50,3 +50,12 @@ const RecordUser: RecordUser = {
 }
 
 console.log(RecordUser);
+
+
+// Required (removed optional properties (check when hovered)):
+type RequiredUser = Required<OptionalUser>;
+
+// NonNullable (cannot be null or undefined):
+const animal: NonNullable<string> = "dog";
+// const animal2: NonNullable<string> = null; // this is an error
+
