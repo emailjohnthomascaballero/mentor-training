@@ -38,3 +38,15 @@ const ReadonlyUser: ReadonlyUser = {
 console.log(OptionalUser.age);
 console.log(PickUser);
 console.log(OmitUser);
+
+
+// Record (it will cause error if you add other keys):
+type RecordUser = Record<"name" | "age" | "address", string>;
+
+const RecordUser: RecordUser = {
+  name: "John", 
+  age: "30",
+  address: "New York",
+}
+
+console.log(RecordUser);
