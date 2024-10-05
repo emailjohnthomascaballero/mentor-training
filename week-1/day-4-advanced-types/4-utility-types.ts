@@ -73,6 +73,14 @@ function getUserData() {
 
 type test = typeof getUserData; // this is a function type
 
-type GetUserDataResponse = ReturnType<typeof getUserData>; // this is a object type
+type GetUserDataResponse = ReturnType<typeof getUserData>; // this is a object type (check when hovered)
 
+function displayUserData(userData: GetUserDataResponse) {
+  console.log(`Name: ${userData.name}`);
+  console.log(`Age: ${userData.age}`);
+  console.log(`Address: ${userData.address}`);
+}
 
+displayUserData(getUserData());
+
+// console.log(GetUserDataResponse);
