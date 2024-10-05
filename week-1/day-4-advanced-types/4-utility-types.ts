@@ -55,7 +55,24 @@ console.log(RecordUser);
 // Required (removed optional properties (check when hovered)):
 type RequiredUser = Required<OptionalUser>;
 
+
 // NonNullable (cannot be null or undefined):
 const animal: NonNullable<string> = "dog";
 // const animal2: NonNullable<string> = null; // this is an error
+
+
+// ReturnType (return object type):
+
+function getUserData() {
+  return {
+    name: "John",
+    age: 30,
+    address: "New York",
+  }
+}
+
+type test = typeof getUserData; // this is a function type
+
+type GetUserDataResponse = ReturnType<typeof getUserData>; // this is a object type
+
 
