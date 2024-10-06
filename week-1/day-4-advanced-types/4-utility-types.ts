@@ -24,7 +24,7 @@ const PickUser: PickUser = {
 const OmitUser: OmitUser = {
   name: "John",
   age: 30,
-}
+};
 
 // you cannot assign new value because it is readonly
 const ReadonlyUser: ReadonlyUser = {
@@ -39,27 +39,23 @@ console.log(OptionalUser.age);
 console.log(PickUser);
 console.log(OmitUser);
 
-
 // Record (it will cause error if you add other keys):
 type RecordUser = Record<"name" | "age" | "address", string>;
 
 const RecordUser: RecordUser = {
-  name: "John", 
+  name: "John",
   age: "30",
   address: "New York",
-}
+};
 
 console.log(RecordUser);
-
 
 // Required (removed optional properties (check when hovered)):
 type RequiredUser = Required<OptionalUser>;
 
-
 // NonNullable (cannot be null or undefined):
 const animal: NonNullable<string> = "dog";
 // const animal2: NonNullable<string> = null; // this is an error
-
 
 // ReturnType (return object type):
 
@@ -68,7 +64,7 @@ function getUserData() {
     name: "John",
     age: 30,
     address: "New York",
-  }
+  };
 }
 
 type test = typeof getUserData; // this is a function type
@@ -84,3 +80,27 @@ function displayUserData(userData: GetUserDataResponse) {
 displayUserData(getUserData());
 
 // console.log(GetUserDataResponse);
+
+// Await
+async function getUserData2() {
+  return new Promise<GetUserDataResponse>((resolve) => {
+    resolve({
+      name: "John",
+      age: 30,
+      address: "New York",
+    });
+  });
+}
+
+type GetUserDataResponse2 = Awaited<ReturnType<typeof getUserData2>>;
+
+async function outputUserData() {
+  const userData: GetUserDataResponse = getUserData();
+  const userData2: GetUserDataResponse2 = await getUserData2();
+
+  console.log("Synchronous Data:", userData);
+  console.log("Asynchronous Data:", userData2);
+}
+
+// Call the function to see the output
+outputUserData();
