@@ -17,3 +17,14 @@ function printValue(value: string | number) {
 printValue("Hello, world!"); // Output: String value: Hello, world!
 printValue(42);   // Output: Number value: 42
 
+
+// Example 2 
+function isString1<TValue>(value: TValue) {
+  return typeof value === "string";
+}
+
+function testFunction(value: unknown) {
+  if (isString1(value)) {
+    console.log(value.toUpperCase());
+  }
+}
