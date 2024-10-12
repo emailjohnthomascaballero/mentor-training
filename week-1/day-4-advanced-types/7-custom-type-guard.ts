@@ -1,5 +1,6 @@
 // TODO: Create a custom type guard
 
+// Example 1
 // Define a custom type guard
 function isString(value: string | number): value is string {
   return typeof value === 'string';
