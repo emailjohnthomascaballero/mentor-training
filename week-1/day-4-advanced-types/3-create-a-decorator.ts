@@ -1,4 +1,5 @@
 // TODO: Create a decorator
+
 function log(
   target: any,
   methodKeyName: string,
