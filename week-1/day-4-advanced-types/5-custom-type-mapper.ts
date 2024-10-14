@@ -1,4 +1,5 @@
 // TODO: Create a mapped type
+
 type BaseUser2 = {
   name: string;
   age: number;
