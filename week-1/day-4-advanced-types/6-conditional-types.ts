@@ -1,4 +1,5 @@
 // TODO: Demonstrate conditional types
+
 type SportType = "soccer" | "tennis" | "basketball";
 
 type SoccerPlayer = {
