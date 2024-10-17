@@ -15,6 +15,7 @@
     <li><a href="#about">About the Journey</a></li>
     <li><a href="#languages">Languages & Tools Used</a></li>
     <li><a href="#mentor">Mentor Training Plan</a></li>
+    <li><a href="#project-link">Project Link</a></li>
     <li><a href="#usage">Usage</a></li>
   </ol>
 </details>
@@ -75,7 +76,14 @@ TypeScript (Week 1)
 <!-- Back to Top -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<h2 id="usage">IV. Usage</h2>
+<h2 id="project-link">IV. Project Link</h2>
+
+- <a href="https://github.com/emailjohnthomascaballero/my-react-vite-lesson">React Vite</a>
+
+<!-- Back to Top -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<h2 id="usage">V. Usage</h2>
 
 _Below is an example of how you can install and setup the application on your device._
 
